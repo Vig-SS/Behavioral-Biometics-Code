@@ -1,0 +1,29 @@
+# requirements-face.txt
+# Siddhi Satheesh — CSCI 693
+# Project: Behavioral Biometrics for Distinguishing Visually Similar Users
+#
+# FACE virtual environment (.venv).
+# Used by: face_baseline, face_swap, make_simulated_twins,
+#          run_experiments (face steps).
+# Kept separate from the pose env because insightface/onnxruntime pull in a
+# newer protobuf that conflicts with MediaPipe's protobuf 4.x requirement.
+#
+# Setup (CPU):
+#   python3 -m venv .venv
+#   source .venv/bin/activate
+#   pip install -r requirements-face.txt
+#
+# Optional GPU (NVIDIA/CUDA 12 only): replace onnxruntime with the GPU build:
+#   pip uninstall -y onnxruntime
+#   pip install onnxruntime-gpu nvidia-cudnn-cu12 nvidia-cublas-cu12 \
+#       nvidia-cuda-runtime-cu12
+#   (run_experiments.py sets LD_LIBRARY_PATH for the GPU automatically.)
+#
+# The face-swap model inswapper_128.onnx is NOT installable via pip; download it
+# once into ~/.insightface/models/  (see face_swap.py header).
+
+opencv-python
+numpy
+pandas
+insightface
+onnxruntime

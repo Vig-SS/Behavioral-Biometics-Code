@@ -1,0 +1,26 @@
+# requirements-pose.txt
+# Siddhi Satheesh — CSCI 693
+# Project: Behavioral Biometrics for Distinguishing Visually Similar Users
+#
+# POSE / BEHAVIOR virtual environment (.venv-pose).
+# Used by: capture_behavior_data, extract_pose_from_video,
+#          train_behavior_classifier, run_behavior_classifier,
+#          behavior_to_comparisons, evaluate, fuse_scores,
+#          visualize_pose_points, run_experiments (pose steps).
+#
+# Setup:
+#   python3 -m venv .venv-pose
+#   source .venv-pose/bin/activate
+#   pip install -r requirements-pose.txt
+#
+# The mediapipe/protobuf pins matter: MediaPipe's legacy solutions API needs
+# protobuf 4.x, and newer protobuf (pulled in by other tools) breaks it.
+
+opencv-python
+mediapipe==0.10.14
+protobuf>=4.25,<5
+numpy
+pandas
+scikit-learn
+joblib
+matplotlib

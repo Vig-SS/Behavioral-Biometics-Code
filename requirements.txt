@@ -1,0 +1,12 @@
+# requirements.txt
+# Siddhi Satheesh — CSCI 693
+# Project: Behavioral Biometrics for Distinguishing Visually Similar Users
+#
+# This project uses TWO virtual environments because the face libraries and the
+# pose library need conflicting versions of protobuf. Do not install everything
+# into one environment. Use:
+#
+#   requirements-pose.txt  -> .venv-pose  (MediaPipe pose + behavior + analysis)
+#   requirements-face.txt  -> .venv       (InsightFace + onnxruntime face work)
+#
+# See README.md for the full step-by-step setup and run instructions.
