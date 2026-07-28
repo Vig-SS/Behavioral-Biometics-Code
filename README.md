@@ -5,7 +5,7 @@
 Code for the paper *Behavioral Biometrics for Distinguishing Visually Similar
 Users*. The pipeline extracts normalized upper-body pose from ordinary webcam
 video, trains a behavioral classifier, compares it against a facial-recognition
-baseline, and fuses the two — evaluated both on visually distinct users and on
+baseline, and fuses the two. Evaluated both on visually distinct users and on
 face-swapped "simulated twin" clips where appearance is neutralized.
 
 ---
